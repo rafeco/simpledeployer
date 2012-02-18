@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+
+#header {
+  background-color: #0F7CAB;
+  color: #FFF;
+  padding: .5em;
+}
+
+h1 {
+  font-family: Courier New;
+  margin: 0;
+  padding: 0;
+}
+
+#deploy {
+  background-color: #eee;
+  border: 1px solid #999;
+  padding: .5em;
+  margin: .5em;
+  width: 260px;
+  float: left;
+}
+
+#deploy h2 {
+  font: bold 120% Verdana;
+  margin: 0 0 .5em 0;
+  padding: 0;
+}
+
+#deploy label {
+  font: bold 83% Verdana;
+  display: block;
+}
+
+#deploy div {
+  padding-bottom: .5em;
+}
+
+#deploy textarea {
+  width: 90%;
+  height: 4em;
+}
+

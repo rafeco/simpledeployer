@@ -1,0 +1,11 @@
+php_value date.timezone 'America/New_York'
+
+<Files ~ "\.sqlite3$">
+  Order allow,deny
+  Deny from all
+</Files>
+
+<Files ~ "^setup.php$">
+  Order allow,deny
+  Deny from all
+</Files>
