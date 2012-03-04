@@ -3,7 +3,7 @@ php_value include_path ".:lib/phpseclib0"
 
 AuthType Basic
 AuthName "Deployer"
-AuthUserFile deployer_users.htpasswd
+AuthUserFile /Users/rcolburn/scratch/deployer/deployer_users.htpasswd
 Require valid-user
 
 <Files ~ "\.sqlite3$">
