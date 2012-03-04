@@ -77,3 +77,9 @@ The SSH helper uses [phpseclib](http://phpseclib.sourceforge.net/),
 a native PHP library that supports SSH and SFTP. Currently,
 phpseclib is checked into the repository.
 
+Inspiration
+-----------
+
+* [Deployinator](https://github.com/etsy/deployinator)
+* [Capistrano](https://github.com/capistrano/capistrano)
+
