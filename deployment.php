@@ -31,12 +31,14 @@
         <h1>SDN Deployment: <?= $deployment->app ?> (tag <?= $deployment->deploy_tag ?>)</h1>
     </div>
 
-    <h2>Console Output</h2>
-    <pre><?= $deployment->console_output ?></pre>
+    <div id="deployment">
+        <h2>Console Output</h2>
+        <pre><?= $deployment->console_output ?></pre>
 
-    <p>
-        Go back to the <a href="index.php">list of deployments</a>.
-    </p>
+        <p>
+            Go back to the <a href="index.php">list of deployments</a>.
+        </p>
+    </div>
 
     <!-- JavaScript at the bottom for fast page loading -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

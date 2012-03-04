@@ -1,5 +1,5 @@
 <?php
-
+    require_once "config.php";
     require_once "Applications.php";
     require_once "DeploymentDAO.php";
 
@@ -25,39 +25,21 @@
 </head>
 <body>
     <div id="header">
-        <h1>SDN Deployer</h1>
+        <h1>Deployer</h1>
     </div>
 
-    <div id="deploy">
-        <h2>Deploy Now</h2>
+    <?php include "include/deploy_form.php" ?>
 
-        <form action="deploy.php" method="post">
-            <div>
-                <label>app</label>
-                <select name="app">
-                    <?php foreach (array_keys($application_configs) as $app): ?>
-                        <option><?= $app ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-
-            <div>
-                <label>comment</label>
-                <textarea name="comment"></textarea>
-            </div>
-
-            <div>
-                <input name="push_environment" type="submit" value="push to development" />
-                <input name="push_environment" type="submit" value="push to production" />
-            </div>
-        </form>
-    </div>
 
     <div id="deploymentHistory">
         <h2>Previous Deployments</h2>
         <ul>
             <?php foreach ($deployments as $d): ?>
-                <li><?= $d->deployed_by ?> deployed <a href="deployment.php?id=<?= $d->id ?>"><?= $d->app ?> (tag <?= $d->deploy_tag ?>)</a> on <?= $d->pretty_deployment_date() ?></li>
+                <li><?= $d->deployed_by ?> deployed
+                    <a href="deployment.php?id=<?= $d->id ?>"><?= $d->app ?>
+                    (tag <?= $d->deploy_tag ?>)</a>
+                    to <?= $d->environment ?>
+                    on <?= $d->pretty_deployment_date() ?></li>
             <?php endforeach; ?>
         </ul>
     </div>

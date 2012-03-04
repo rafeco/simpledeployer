@@ -20,9 +20,9 @@ h1 {
   background-color: #eee;
   border: 1px solid #999;
   padding: .5em;
-  margin: .5em;
+  margin: 1em;
   width: 260px;
-  float: left;
+  float: right;
 }
 
 #deploy h2 {
@@ -45,3 +45,14 @@ h1 {
   height: 4em;
 }
 
+#deploymentHistory {
+  margin: 1em;
+}
+
+#deploymentHistory li {
+  margin-bottom: .5em;
+}
+
+#deployment {
+  margin: 1em;
+}

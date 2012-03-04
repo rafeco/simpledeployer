@@ -8,6 +8,8 @@ require_once "Applications.php";
 // arguments.
 
 if ("cli" == php_sapi_name()) {
+    set_include_path(get_include_path() . PATH_SEPARATOR . "lib/phpseclib0");
+
     $deployer = new Deployer();
 
     if (count($argv) < 4) {

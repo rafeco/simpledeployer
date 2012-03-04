@@ -1,5 +1,7 @@
 <?php
 
+require_once "config.php";
+
 class Deployment {
     var $id, $app, $environment, $deploy_tag, $deployed_by, $deployment_date, $comment, $console_output;
 
@@ -15,10 +17,12 @@ class Deployment {
 class DeploymentDAO {
     var $db;
 
+    const DB_URL = 'sqlite:/tmp/deployments.sqlite3';
+
     public function __construct($db = null) {
         if (null == $db) {
             try {
-                $this->db = new PDO('sqlite:deployments.sqlite3');
+                $this->db = new PDO(self::DB_URL);
                 $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {
                 echo "Connection failed: " + $e->getMessage();
