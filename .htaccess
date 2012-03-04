@@ -1,9 +1,9 @@
 php_value date.timezone 'America/New_York'
-php_value include_path ".:/Users/rcolburn/scratch/deployer/lib/phpseclib0"
+php_value include_path ".:lib/phpseclib0"
 
 AuthType Basic
-AuthName "SDN Deployer"
-AuthUserFile /Users/rcolburn/scratch/deployer/deployer_users.htpasswd
+AuthName "Deployer"
+AuthUserFile deployer_users.htpasswd
 Require valid-user
 
 <Files ~ "\.sqlite3$">
