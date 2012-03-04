@@ -31,7 +31,25 @@
         <h1>Deployment: <?= $deployment->app ?> (tag <?= $deployment->deploy_tag ?>)</h1>
     </div>
 
+
     <div id="deployment">
+        <p>
+            deployed to: <?= $deployment->environment ?>
+        </p>
+        <p>
+            deployed by: <?= $deployment->deployed_by ?>
+        </p>
+        <p>
+            deployed on: <?= $deployment->pretty_deployment_date() ?>
+        </p>
+
+        <h2>Comments</h2>
+        <?php if (!empty($deployment->comments)): ?>
+            <p><?= $deployment->comments ?></p>
+        <?php else: ?>
+            <p>No comment entered.</p>
+        <?php endif; ?>
+
         <h2>Console Output</h2>
         <pre><?= $deployment->console_output ?></pre>
 
