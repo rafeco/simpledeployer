@@ -21,10 +21,12 @@ script from the command line:
 Next you'll need to set up authentication for the application.
 SimpleDeployer taps into basic authentication to keep track of
 which user has run a deployment. The `.htaccess` file already
-has an authentication realm set up. You'll just need to
-generate the user file using `htpasswd`. Read the man page for
-details.
+has an authentication realm set up. You'll need to generate the
+user file using `htpasswd`. Read the man page for details.
 
+You'll also need to specify the full path to your password
+file in .htaccess. The relative path that's in there by default
+will not work.
 
 Adding a New Application
 ------------------------
