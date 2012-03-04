@@ -18,7 +18,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>SDN Deployment: <?= $deployment->app ?> (tag <?= $deployment->deploy_tag ?>)</title>
+    <title>Deployment: <?= $deployment->app ?> (tag <?= $deployment->deploy_tag ?>)</title>
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
@@ -28,7 +28,7 @@
 </head>
 <body>
     <div id="header">
-        <h1>SDN Deployment: <?= $deployment->app ?> (tag <?= $deployment->deploy_tag ?>)</h1>
+        <h1>Deployment: <?= $deployment->app ?> (tag <?= $deployment->deploy_tag ?>)</h1>
     </div>
 
     <div id="deployment">

@@ -26,7 +26,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>SDN Deployer</title>
+    <title>Deployer</title>
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">

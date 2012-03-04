@@ -15,7 +15,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>SDN Deployer</title>
+    <title>Deployer</title>
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
@@ -25,45 +25,8 @@
 </head>
 <body>
     <div id="header">
-        <h1>SDN Deployer</h1>
+        <h1>Deployer Help</h1>
     </div>
-
-    <div id="deploymentHistory">
-        <ul>
-        </ul>
-    </div>
-
-    <div id="deploy">
-        <h2>Deploy Now</h2>
-
-        <form>
-            <div>
-                <label>app</label>
-                <select name="app">
-                    <option>main site</option>
-                    <option>forums</option>
-                    <option>schools</option>
-                    <option>q &amp; a</option>
-                </select>
-            </div>
-
-            <div>
-                <label>tag</label>
-                <input type="text" size="25" maxlength="25" name="deploy_tag" />
-            </div>
-
-            <div>
-                <label>comment</label>
-                <textarea name="comment"></textarea>
-            </div>
-
-            <div>
-                <input type="submit" value="deploy" />
-            </div>
-        </form>
-    </div>
-
-    <div class="deploymentResults"></div>
 
     <!-- JavaScript at the bottom for fast page loading -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
