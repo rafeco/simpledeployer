@@ -70,3 +70,10 @@ You can test deployments from the command line by running
 `Deployer.php` directly. It detects when it's run in that manner
 and prompts the user for the proper arguments.
 
+Dependencies
+------------
+
+The SSH helper uses [phpseclib](http://phpseclib.sourceforge.net/),
+a native PHP library that supports SSH and SFTP. Currently,
+phpseclib is checked into the repository.
+
