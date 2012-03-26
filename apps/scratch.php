@@ -7,13 +7,14 @@ class Apps_Scratch {
     }
 
     public function deployDevelopment() {
-        $host = 'example.com';
-        $remote_path = '/home/example/scratch';
-        $ssh_port = '22';
-        $user = 'someuser';
-        $key_path = "keys/deployment_key";
+        $host = 'trudy.rc3.org';
+        $remote_path = '/home/rafeco/scratch';
+        $ssh_port = '22112';
+        $user = 'rafeco';
+        $key_path = "/tmp/keys/deployment_key";
+        $password = '';
 
-        $ssh_helper = new SshHelper($user, $host, $key_path, $ssh_port);
+        $ssh_helper = new SshHelper($user, $host, $password, $key_path, $ssh_port);
 
         $out = array();
 
