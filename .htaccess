@@ -11,6 +11,11 @@ Require valid-user
   Deny from all
 </Files>
 
+<Files ~ "\.htpasswd$">
+  Order allow,deny
+  Deny from all
+</Files>
+
 <Files ~ "^setup.php$">
   Order allow,deny
   Deny from all
