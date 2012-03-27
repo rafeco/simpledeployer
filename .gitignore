@@ -1,3 +1,4 @@
 deployments.sqlite3
 keys/*
 *.htpasswd
+apps/local/*
