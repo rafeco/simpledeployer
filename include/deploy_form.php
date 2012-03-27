@@ -1,7 +1,12 @@
     <div id="deploy">
         <h2>Deploy Now</h2>
 
-        <form action="deploy.php" method="post">
+        <div id="progress">
+            <p>Deploying ...</p>
+            <p><img src="ajax-loader.gif" /></p>
+        </div>
+
+        <form action="deploy.php" method="post" id="deploymentForm">
             <div>
                 <label>app</label>
                 <select name="app">
@@ -17,8 +22,8 @@
             </div>
 
             <div>
-                <input name="push_environment" type="submit" value="push to development" />
-                <input name="push_environment" type="submit" value="push to production" />
+                <input name="push_environment" id="pushToDevelopment" type="submit" value="push to development" />
+                <input name="push_environment" id="pushToProduction" type="submit" value="push to production" />
             </div>
         </form>
     </div>

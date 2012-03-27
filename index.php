@@ -2,10 +2,6 @@
     require_once "config.php";
     require_once DEPLOYMENT_SCRIPTS . "/Applications.php";
     require_once "DeploymentDAO.php";
-
-    $dao = new DeploymentDAO();
-
-    $deployments = $dao->findRecent();
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -30,18 +26,8 @@
 
     <?php include "include/deploy_form.php" ?>
 
-
     <div id="deploymentHistory">
-        <h2>Previous Deployments</h2>
-        <ul>
-            <?php foreach ($deployments as $d): ?>
-                <li><?= $d->deployed_by ?> deployed
-                    <a href="deployment.php?id=<?= $d->id ?>"><?= $d->app ?>
-                    (tag <?= $d->deploy_tag ?>)</a>
-                    to <?= $d->environment ?>
-                    on <?= $d->pretty_deployment_date() ?></li>
-            <?php endforeach; ?>
-        </ul>
+        <?php include "deployments.php" ?>
     </div>
 
     <div class="deploymentResults"></div>
@@ -51,9 +37,24 @@
 
     <script>
         $(document).ready(function () {
-            $("#deploy form").submit(function () {
-                var form = this;
-                $("#deploy form :submit", form).attr('disabled', true);
+            $('#progress').hide();
+            $('#deploymentForm input[type="submit"]').click(function (event) {
+                var formData = $(this).closest('form').serializeArray();
+                formData.push({name: this.name, value: this.value});
+                event.preventDefault();
+                $('#deploymentForm').hide();
+                $('#progress').show();
+                $.ajax({
+                    type: "POST",
+                    url: $(this).closest('form').attr("action"),
+                    data: formData,
+                    success: function () {
+                        $('#deploymentHistory').load('deployments.php');
+                        $('#deploymentForm textarea[name="comment"]').val('');
+                        $('#progress').hide();
+                        $('#deploymentForm').show();
+                    }
+                });
             });
         });
     </script>

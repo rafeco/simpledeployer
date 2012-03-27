@@ -13,7 +13,7 @@ class Apps_Scratch {
         $user = 'someuser';
         $key_path = DEPLOYMENT_SSH_KEYS . "/deployment_key";
 
-        $ssh_helper = new SshHelper($user, $host, $key_path, $ssh_port);
+        $ssh_helper = new SshHelper($user, $host, $password, $key_path, $ssh_port);
 
         $out = array();
 
