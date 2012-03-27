@@ -22,17 +22,29 @@ Next you'll need to set up authentication for the application.
 SimpleDeployer taps into basic authentication to keep track of
 which user has run a deployment. The `.htaccess` file already
 has an authentication realm set up. You'll need to generate the
-user file using `htpasswd`. Read the man page for details.
+user file using `htpasswd` in the `.htaccess` file. Read the
+man page for details.
 
 You'll also need to specify the full path to your password
-file in .htaccess. The relative path that's in there by default
+file in `.htaccess`. The relative path that's in there by default
 will not work.
+
+There are some other paths in the `config.php` file that you
+may need to modify. Your deployment scripts live by default
+in `apps/local` and SSH keys by default live in the `keys`
+directory. Both locations can be changed if it's more
+convenient for you.
 
 Adding a New Application
 ------------------------
 
-Applications are listed in `Applications.php`. Each application
-must have the following configuration parameters:
+Applications are listed in `Applications.php`. There's a sample
+of `Applications.php` in the `apps` directory. You'll need to
+copy it to the directory where your deployment scripts will be
+stored. So if you're going to use the default location, you'll
+want to copy it to `apps/local`.
+
+Each application must have the following configuration parameters:
 
 * `name` - The name of the application. Will be displayed in the
   UI.
