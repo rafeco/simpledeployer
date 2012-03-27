@@ -11,7 +11,7 @@ class Apps_Scratch {
         $remote_path = '/home/example/scratch';
         $ssh_port = '22';
         $user = 'someuser';
-        $key_path = "keys/deployment_key";
+        $key_path = DEPLOYMENT_SSH_KEYS . "/deployment_key";
 
         $ssh_helper = new SshHelper($user, $host, $key_path, $ssh_port);
 

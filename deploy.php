@@ -1,6 +1,6 @@
 <?php
 
-    require_once "Applications.php";
+    require_once DEPLOYMENT_SCRIPTS . "/Applications.php";
     require_once "Deployer.php";
     require_once "DeploymentDAO.php";
 

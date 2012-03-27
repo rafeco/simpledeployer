@@ -1,7 +1,7 @@
 <?php
 
 require_once "DeploymentDAO.php";
-require_once "Applications.php";
+require_once DEPLOYMENT_SCRIPTS . "/Applications.php";
 
 // If this script is being called from the command line,
 // go ahead and try to deploy using the command line
