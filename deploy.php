@@ -1,4 +1,5 @@
 <?php
+    require_once "config.php";
 
     require_once DEPLOYMENT_SCRIPTS . "/Applications.php";
     require_once "Deployer.php";

@@ -48,6 +48,11 @@
                     type: "POST",
                     url: $(this).closest('form').attr("action"),
                     data: formData,
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        $('div.deploymentResults').after('<p class="ajaxError">' + errorThrown + '</p>');
+                        $('#progress').hide();
+                        $('#deploymentForm').show();
+                    },
                     success: function () {
                         $('#deploymentHistory').load('deployments.php');
                         $('#deploymentForm textarea[name="comment"]').val('');
