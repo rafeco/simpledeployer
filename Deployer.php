@@ -56,6 +56,8 @@ class Deployer {
             $out = $worker->deployDevelopment();
         }
 
+        $application['version_url'] = $application[$environment . "_version_url"];
+
         $deployment->console_output = $out;
 
         $result = $this->getVersion($application['version_url']);
