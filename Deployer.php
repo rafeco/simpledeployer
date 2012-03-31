@@ -77,7 +77,16 @@ class Deployer {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $result = curl_exec($ch);
+
+        $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
         curl_close($ch);
+
+        if ('200' != $http_status) {
+            $result = "missing_version_file";
+        } elseif (strlen($result) > 40) {
+            $result = "invalid_tag";
+        }
 
         return $result;
     }
