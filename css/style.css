@@ -76,3 +76,11 @@ p.comment {
   background-color: #ddd;
   width: 500px;
 }
+
+span.development {
+  color: #006666;
+}
+
+span.production {
+  color: #990000;
+}
