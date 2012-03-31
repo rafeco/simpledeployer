@@ -44,8 +44,8 @@
         </p>
 
         <h2>Comments</h2>
-        <?php if (!empty($deployment->comments)): ?>
-            <p><?= $deployment->comments ?></p>
+        <?php if (!empty($deployment->comment)): ?>
+            <p class="comment"><?= $deployment->comment ?></p>
         <?php else: ?>
             <p>No comment entered.</p>
         <?php endif; ?>

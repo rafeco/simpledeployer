@@ -69,3 +69,10 @@ h1 {
   font-weight: bold;
   text-align: center;
 }
+
+p.comment {
+  border: 1px solid #666;
+  padding: .5em;
+  background-color: #ddd;
+  width: 500px;
+}
