@@ -1,6 +1,8 @@
 SimpleDeployer
 ==============
 
+*This project is archived.*
+
 SimpleDeployer is a PHP application that enables you to deploy
 applications using recipes that you create. There's an example
 application included, `scratch`, to show how the recipes work.
